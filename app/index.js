@@ -4,17 +4,17 @@
  */
 
 // Dependencies
-var http = require('http')
-var url = require('url')
+const http = require('http');
+const url = require('url');
 
 // The server should respond to all requests with a string response
-var server = http.createServer(function (req, res) {
+const server = http.createServer(function (req, res) {
   // Get the url and parse it
-  var parsedUrl = url.parse(req.url, true)
+  const parsedUrl = url.parse(req.url, true);
 
   // Get the path
-  var path = parsedUrl.pathname
-  var trimmedPath = path.replace(/^\/+|\/+$/g, '')
+  const path = parsedUrl.pathname;
+  const trimmedPath = path.replace(/^\/+|\/+$/g,'')
 
   // Send the response
   res.end('Hello World\n')
